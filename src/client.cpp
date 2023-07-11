@@ -23,7 +23,11 @@ Client::Client(FastPIRParams params)
         steps.push_back(-i);
     }
     keygen->create_galois_keys(steps, gal_keys);
-
+    
+    seal::Serializable<seal::GaloisKeys> galois_keys_serial = keygen->create_galois_keys(steps);
+    std::stringstream ss;
+    std::cout << "Gal Keys: " << galois_keys_serial.save(ss) << " bytes" << std::endl;
+    
     return;
 }
 

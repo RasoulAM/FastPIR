@@ -46,8 +46,8 @@ int main(int argc, char *argv[])
         std::cout<<"FastPIR expects even obj_size; padding obj_size to "<<obj_size<<" bytes"<<std::endl<<std::endl;
     }
 
-    cout << "Number of objects: " << num_obj << endl;
-    cout << "Object size: " << obj_size << " bytes" << endl;
+    std::cout << "Number of objects: " << num_obj << std::endl;
+    std::cout << "Object size: " << obj_size << " bytes" << std::endl;
 
     srand(time(NULL));
     std::chrono::high_resolution_clock::time_point time_start, time_end;

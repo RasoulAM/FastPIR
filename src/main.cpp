@@ -13,6 +13,8 @@ std::vector<std::vector<unsigned char>> populate_db(size_t num_obj, size_t obj_s
 
 int main(int argc, char *argv[])
 {
+
+    std::cout << "================" << std::endl;
     size_t obj_size = 0; // Size of each object in bytes
     size_t num_obj = 0;  // Total number of objects in DB
 
@@ -43,6 +45,9 @@ int main(int argc, char *argv[])
         obj_size++;
         std::cout<<"FastPIR expects even obj_size; padding obj_size to "<<obj_size<<" bytes"<<std::endl<<std::endl;
     }
+
+    cout << "Number of objects: " << num_obj << endl;
+    cout << "Object size: " << obj_size << " bytes" << endl;
 
     srand(time(NULL));
     std::chrono::high_resolution_clock::time_point time_start, time_end;
